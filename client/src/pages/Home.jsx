@@ -1,12 +1,16 @@
-import React from "react";
+import React from 'react';
+import HeroSection from '../components/HeroSection';
 
-function Home() {
+const Home = () => {
   return (
-    <div className="text-center py-20">
-      <h1 className="text-4xl font-bold text-blue-600">Welcome to Travellogist</h1>
-      <p className="mt-4 text-lg text-gray-600">Explore Pakistan, Umrah, and Worldwide Tours</p>
-    </div>
+    <>
+      <HeroSection />
+      <section className="text-center py-12">
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">Top Destinations</h2>
+        <p className="text-gray-600">Discover our most popular travel packages</p>
+      </section>
+    </>
   );
-}
+};
 
 export default Home;
