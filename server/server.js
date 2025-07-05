@@ -4,6 +4,14 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 
 import packageRoutes from './routes/packageRoutes.js';
+import authRoutes from './routes/authRoutes.js';
+import bookingRoutes from './routes/bookingRoutes.js';
+
+app.use('/api/bookings', bookingRoutes);
+
+
+
+app.use('/api/auth', authRoutes);
 
 dotenv.config();
 const app = express();
