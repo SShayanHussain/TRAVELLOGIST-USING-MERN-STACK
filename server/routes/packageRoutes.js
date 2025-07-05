@@ -1,9 +1,18 @@
 import express from 'express';
-import { getPackages, createPackage } from '../controllers/packageController.js';
+import {
+  getPackages,
+  createPackage,
+  updatePackage,
+  deletePackage
+} from '../controllers/packageController.js';
+
+import auth, { adminOnly } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
 router.get('/', getPackages);
-router.post('/', createPackage); // will protect later with admin auth
+router.post('/', auth, adminOnly, createPackage);
+router.put('/:id', auth, adminOnly, updatePackage);
+router.delete('/:id', auth, adminOnly, deletePackage);
 
 export default router;

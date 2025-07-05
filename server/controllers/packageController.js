@@ -1,22 +1,30 @@
-import Package from '../models/Package.js';
+import Package from '../models/packageModel.js';
 
-// Get all packages
+// GET all
 export const getPackages = async (req, res) => {
-  try {
-    const packages = await Package.find();
-    res.json(packages);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
+  const packages = await Package.find();
+  res.json(packages);
 };
 
-// Create package (admin only later)
+// CREATE
 export const createPackage = async (req, res) => {
-  try {
-    const newPackage = new Package(req.body);
-    const saved = await newPackage.save();
-    res.status(201).json(saved);
-  } catch (err) {
-    res.status(400).json({ error: err.message });
-  }
+  const { title, type, price, duration, image } = req.body;
+
+  const newPackage = new Package({ title, type, price, duration, image });
+  const saved = await newPackage.save();
+
+  res.status(201).json(saved);
+};
+
+// UPDATE
+export const updatePackage = async (req, res) => {
+  const { id } = req.params;
+  const updated = await Package.findByIdAndUpdate(id, req.body, { new: true });
+  res.json(updated);
+};
+
+// DELETE
+export const deletePackage = async (req, res) => {
+  await Package.findByIdAndDelete(req.params.id);
+  res.json({ message: 'Package deleted' });
 };
