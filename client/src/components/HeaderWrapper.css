@@ -1,0 +1,15 @@
+.header-wrapper {
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #4DFFBE; 
+}
+
+.navbar-container-wrapper {
+    max-width: 93%;
+  background-color: #F6F6F6;
+  border-top-right-radius: 75px;
+  border-top-left-radius: 0;
+  overflow: hidden;
+}

@@ -1,18 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+import './Navbar.css';
+
+function Navbar() {
   return (
-    <nav className="bg-white shadow px-6 py-4 flex justify-between items-center sticky top-0 z-50">
-      <Link to="/" className="text-xl font-bold text-blue-600">Travellogist</Link>
-      <ul className="flex space-x-4 text-gray-700 font-medium">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/packages">Packages</Link></li>
-        <li><Link to="/umrah">Umrah</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-        <li><Link to="/login">Login</Link></li>
-      </ul>
-    </nav>
+    <header className="navbar">
+      <div className="navbar-container">
+        <span className="navbar-logo">
+          <span><img src='/images/travellogist.png'></img></span>
+          <span><a href="/">TRAVELLOGIST</a></span>
+        </span>
+        <nav className="navbar-links">
+          <a href="/">Home</a>
+          <a href="/destinations">Destinations</a>
+          <a href="/trip-types/domastic">Domestic</a>
+          <a href="/trip-types/international">International</a>
+          <a href="/umrah">Umrah</a>
+          <a href="/visa">Visa</a>
+          <a href="/gallery">Gallery</a>
+          <a href="/about">About Us</a>
+        </nav>
+      </div>
+    </header>
   );
 };
 
