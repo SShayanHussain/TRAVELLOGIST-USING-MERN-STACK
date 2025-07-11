@@ -42,33 +42,26 @@ const HeroSection = () => {
           </p>
 
         </div>
-        <div className='form-container'>
-          <form className="hero-search-form">
-          <div className="form-group">
-            <label htmlFor="location">Location</label>
-            <input type="text" id="location" name="location" placeholder="Where to?" />
+        <div className="search">
+          <div className="container">
+            <label htmlFor="">Where you want to go</label>
+            <input type="text" placeholder="Search Your location" />
           </div>
-
-          <div className="form-group">
-            <label htmlFor="checkin">Check-in</label>
-            <input type="date" id="checkin" name="checkin" />
+          <div className="container">
+            <label htmlFor="">Check-in</label>
+            <input type="date" />
           </div>
-
-          <div className="form-group">
-            <label htmlFor="checkout">Check-out</label>
-            <input type="date" id="checkout" name="checkout" />
+          <div className="container">
+            <label htmlFor="">Check-out</label>
+            <input type="date" />
           </div>
-
-          <button type="submit" className="search-btn">Search</button>
-        </form>
-
+          <button>Explore Now</button>
         </div>
-        
-
+      
       </div>
-      
-      
+
     </div>
+    
   );
 };
 

@@ -1,16 +1,36 @@
 .hero {
-    position: relative;
-    width: 100%;
-    height: 80vh; /* Or 100vh for full screen */
-    background: url('/images/hero.jpg') no-repeat center center/cover;
-    margin: 0;
-    color: aliceblue;
-    opacity: 0.9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background: url('/images/hero.jpg') no-repeat center center/cover;
+  margin: 0;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
+
+.overlay {
+  position: relative; /* Changed from absolute */
+  width: 100%;
+  padding-top: 80px; /* Space from top */
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  background-color: rgba(0, 0, 0, 0.55);
+  top: 0;
+  left: 0;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
 
 .blinking-cursor {
   animation: blink 0.7s step-end infinite;
@@ -21,50 +41,100 @@
   50% { opacity: 0; }
 }
 
-.wave-container {
-  position: relative;
-  width: 100%;
-  height: 100px;
-  overflow: hidden;
-  line-height: 0;
-  z-index: 0;
-  margin-top: -1px;
-}
 
-.wave-svg {
-  width: 200%;
-  height: 100%;
-  animation: waveMove 7s linear infinite;
-}
 
-@keyframes waveMove {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.55); /* semi-transparent black */
+.search {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 20px;
+  background-color: #ffffffce;
+  padding: 1.5rem;
+  border-radius: 40px;
+  margin-top: 200px;
+  margin-bottom: 0;
 }
-.hero-search-form {
-    flex-wrap: wrap;
-}
-.form-container {
-    color: aliceblue;
-    background-color: black;
-    
 
+.search .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 0.5rem;
+}
+
+.search .container label {
+  font-size: 1.1rem;
+  color: #03045e;
+}
+
+.search .container input {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  color: black;
+}
+
+.search .container input[type="date"] {
+  padding-left: 3rem;
+}
+
+.search .container input::placeholder {
+  color: black;
+}
+
+.search .container input:focus {
+  outline: none;
+}
+
+.search button {
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  border: none;
+  color: white;
+  background-color: black;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+
+.search button:hover {
+  background-color: #023e8a;
+}
+
+
+@media screen and (min-width: 280px) and (max-width: 980px) {
+  .background {
+    background-color: palegreen;
+  }
+
+  .background img {
+    height: 100%;
+  }
+
+  .content .title h1 {
+    font-size: 1rem;
+  }
+
+  .content .title p {
+    font-size: 0.8rem;
+    padding: 1vw;
+  }
+
+  .search {
+    flex-direction: column;
+    padding: 0.8rem;
+    gap: 0.8rem;
+  }
+
+  .search .container {
+    padding: 0 0.8rem;
+  }
+
+  .search .container input[type="date"] {
+    padding-left: 1rem;
+  }
+
+  .search button {
+    padding: 1rem;
+    font-size: 1rem;
+  }
 }
