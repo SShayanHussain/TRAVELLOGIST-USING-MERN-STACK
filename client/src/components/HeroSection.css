@@ -46,10 +46,11 @@
 .search {
   display: flex;
   background-color: #ffffffce;
-  padding: 1.5rem;
+  padding: 10px 20px;
   border-radius: 40px;
   margin-top: 200px;
   margin-bottom: 0;
+  gap: 40px;
 }
 
 .search .container {
@@ -73,7 +74,10 @@
 }
 
 .search .container input[type="date"] {
-  padding-left: 3rem;
+  padding-left: 0;
+  box-shadow:black ;
+  
+
 }
 
 .search .container input::placeholder {
@@ -87,13 +91,14 @@
 .search button {
   padding: 1rem;
   cursor: pointer;
-  border-radius: 0.3rem;
+  border-radius: 40px;
   border: none;
   color: white;
   background-color: black;
   font-size: 1.1rem;
   text-transform: uppercase;
   transition: 0.3s ease-in-out;
+  width: 100%;
 }
 
 .search button:hover {
