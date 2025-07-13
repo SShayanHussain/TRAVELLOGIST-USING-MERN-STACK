@@ -18,6 +18,12 @@
     gap: 30px; 
 }
 
+.top-header-right {
+  display: flex;
+  align-items: center;
+}
+
+
 .email-container,
 .phone-container {
     display: flex;
@@ -26,15 +32,20 @@
     color: white;
 }
 .top-header-right span {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #A2D5C6; 
-    color: black; 
-    padding: 8px 16px;
-    border-radius: 30px;
-    font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #A2D5C6; 
+  color: black; 
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: 500;
 }
+.outer {
+  margin: 0 8px; /* only left and right spacing */
+}
+
+
 .top-header-right a {
     color: #0d0d0d; 
     text-decoration: none;
@@ -53,14 +64,7 @@
   display: inline-block;
   vertical-align: middle;
 }
-/* .face-icon {
-    color:#A2D5C6 ; 
-    font-size: 14px; 
-    width: 18px; 
-    height: 18px; 
-    display: inline-block;
-    vertical-align: middle;
-} */
+
 
 .gg-mail,
 .gg-mail::after {

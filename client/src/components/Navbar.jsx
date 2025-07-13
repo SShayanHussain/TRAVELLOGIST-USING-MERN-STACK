@@ -11,7 +11,9 @@ function Navbar() {
         </span>
         <nav className="navbar-links">
           <a href="/">Home</a>
+          
           <a href="/destinations">Destinations</a>
+          <a href="/about">Packages</a>
           <a href="/trip-types/domastic">Domestic</a>
           <a href="/trip-types/international">International</a>
           <a href="/umrah">Umrah</a>

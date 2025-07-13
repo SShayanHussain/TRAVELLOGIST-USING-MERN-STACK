@@ -53,7 +53,7 @@
   gap: 40px;
 }
 
-.search .container {
+.search .hero-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,30 +61,30 @@
   padding: 0 0.5rem;
 }
 
-.search .container label {
+.search .hero-container label {
   font-size: 1.1rem;
   color: #03045e;
 }
 
-.search .container input {
+.search .hero-container input {
   background-color: transparent;
   border: none;
   text-align: center;
   color: black;
 }
 
-.search .container input[type="date"] {
+.search .hero-container input[type="date"] {
   padding-left: 0;
   box-shadow:black ;
   
 
 }
 
-.search .container input::placeholder {
+.search .hero-container input::placeholder {
   color: black;
 }
 
-.search .container input:focus {
+.search .hero-container input:focus {
   outline: none;
 }
 
