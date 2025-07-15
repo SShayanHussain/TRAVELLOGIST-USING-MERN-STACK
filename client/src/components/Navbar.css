@@ -32,7 +32,7 @@
   font-size: 1.8rem;
   font-weight: bold;
   text-decoration: none;
-  color: #A2D5C6;
+  color: #06923E;
 }
 
 .navbar-links {
@@ -80,13 +80,14 @@
 }
 
 .navbar-links a:hover::before {
-  background: #4DFFBE;
+  background: #06923E;
   animation: clockwise 1s infinite;
   opacity: 1;
 }
 
 .navbar-links a:hover::after {
-  background: #CFFFE2;
+  background: #4DFFBE;
+  color: #D3ECCD;
   animation: counterclockwise 2s infinite;
   opacity: 1;
 }

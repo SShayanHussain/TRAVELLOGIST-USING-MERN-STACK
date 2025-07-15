@@ -1,0 +1,114 @@
+.flag-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Wider min size */
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  background-color: #D3ECCD;
+  border-radius: 10px;
+}
+
+.columns {
+  height: 100px; 
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 20px;
+  padding: 5px;
+  border: 2px solid black;
+  transition: all 0.4s;
+  box-sizing: border-box;
+  background-color: white;
+  text-align: center;
+}
+
+
+.columns:hover {
+  box-shadow: 4px 4px 0 1px rgba(0, 0, 0);
+  background-color: #4DFFBE;
+}
+
+.dots {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+
+
+.flag {
+  margin-right: 10px;
+}
+
+
+.secondary-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+}
+
+
+
+.container-Visa {
+
+  position: relative;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.spiral {
+  position: absolute;
+  bottom: 20px; /* You can tweak this */
+  right: 20px;  /* or left: 20px; */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Makes it a circle */
+  background: repeating-radial-gradient(
+    circle at center,
+    #FFA725 0,
+    #FFA725 1em,
+    white 1em,
+    white 2em
+  );
+  animation: spin 10s linear infinite;
+  opacity: 0.6;
+  z-index: -1;
+}
+.ball-1 {
+  top: 30%;
+  left: -90px;
+  animation-duration: 20s;
+}
+
+.ball-2 {
+  bottom: 5px;
+  
+  width: 250px;
+  height: 250px;
+  animation-duration: 25s;
+}
+
+.ball-3 {
+  top: 10%;
+  right: 20%;
+  width: 100px;
+  height: 100px;
+  animation-duration: 18s;
+}
+
