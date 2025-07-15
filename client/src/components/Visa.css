@@ -57,20 +57,26 @@
   white-space: nowrap;
 }
 
+.visa-heading {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: #06923E;
+  margin-bottom: 30px;
+}
 
 
 .container-Visa {
-
   position: relative;
   padding: 80px 20px;
   display: flex;
+  flex-direction: column; /* make it a vertical stack */
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   z-index: 0;
-  overflow: hidden;
-  background-color: #ffffff;
 }
+
+
 
 .spiral {
   position: absolute;

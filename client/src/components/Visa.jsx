@@ -16,7 +16,7 @@ const Visa = () => {
   return (
     
     <div className="container-Visa">
-        
+        <h2 className="visa-heading">Visas</h2>
         <div className="spiral-container">
             <span className="spiral ball-1"></span>
             <span className="spiral ball-2"></span>
